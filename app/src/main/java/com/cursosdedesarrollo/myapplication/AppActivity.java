@@ -7,9 +7,10 @@ import com.cursosdedesarrollo.myapplication.beans.Person;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
-public class AppActivity extends Activity {
+public class AppActivity extends AppCompatActivity {
 	
 
 	protected Aplicacion app;

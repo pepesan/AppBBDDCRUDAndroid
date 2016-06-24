@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,5 +46,26 @@ public class Mostrar extends AppActivity {
 		app.remove(app.get((long)id));
 		Toast.makeText(this, R.string.deleted, Toast.LENGTH_SHORT).show();
 		finish();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_mostrar, menu);
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle item selection
+		switch (item.getItemId()) {
+			case R.id.menu_edit:
+				edit(null);
+				return true;
+			case R.id.menu_delete:
+				delete(null);
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
 	}
 }

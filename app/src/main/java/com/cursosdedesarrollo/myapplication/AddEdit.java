@@ -6,6 +6,7 @@ import com.cursosdedesarrollo.myapplication.beans.Person;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -58,5 +59,23 @@ public class AddEdit extends AppActivity {
 		}
 			
 		finish();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_add_edit, menu);
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle item selection
+		switch (item.getItemId()) {
+			case R.id.menu_save:
+				save(null);
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
 	}
 }

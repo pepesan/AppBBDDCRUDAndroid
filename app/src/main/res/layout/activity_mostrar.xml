@@ -12,22 +12,4 @@
         android:layout_centerVertical="true"
         android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/show_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/edit" 
-        android:onClick="edit"/>
-
-    <Button
-        android:id="@+id/show_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/delete" 
-        android:onClick="delete"/>
-
 </RelativeLayout>
