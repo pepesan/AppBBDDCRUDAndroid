@@ -22,6 +22,7 @@ public class AddEdit extends AppActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_edit);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		try{
 			Bundle extras = getIntent().getExtras();
 	        id = extras.getLong("id");

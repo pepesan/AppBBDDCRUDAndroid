@@ -19,11 +19,21 @@
         </activity>
         <activity
             android:name="com.cursosdedesarrollo.myapplication.Mostrar"
-            android:label="@string/title_activity_mostrar" >
+            android:label="@string/title_activity_mostrar"
+            android:parentActivityName="com.cursosdedesarrollo.myapplication.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cursosdedesarrollo.myapplication.MainActivity" />
         </activity>
         <activity
             android:name="com.cursosdedesarrollo.myapplication.AddEdit"
-            android:label="@string/title_activity_add_edit" >
+            android:label="@string/title_activity_add_edit"
+            android:parentActivityName="com.cursosdedesarrollo.myapplication.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cursosdedesarrollo.myapplication.MainActivity" />
         </activity>
     </application>
 
