@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">androidexamples35aplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_mostrar">Mostrar</string>
+    <string name="add">Nuevo</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Borrar</string>
+    <string name="deleted">Borrado</string>
+    <string name="modified">Modificado</string>
+    <string name="title_activity_add_edit">AddEdit</string>
+    <string name="save">Guardar</string>
+    <string name="saved">Guardado</string>
+    <string name="cadena">Cadena</string>
+    <string name="titulo_cadena">Cadena</string>
+
+</resources>
