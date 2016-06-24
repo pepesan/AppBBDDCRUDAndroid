@@ -23,7 +23,6 @@ public class Mostrar extends AppActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 		Bundle extras = getIntent().getExtras();
         id = extras.getLong("id");
 		tv=(TextView)findViewById(R.id.mostrar_tv);
