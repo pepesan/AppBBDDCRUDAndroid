@@ -2,9 +2,9 @@ package com.cursosdedesarrollo.myapplication;
 
 import java.util.List;
 
+import com.cursosdedesarrollo.myapplication.beans.Aplicacion;
 import com.cursosdedesarrollo.myapplication.beans.Person;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;

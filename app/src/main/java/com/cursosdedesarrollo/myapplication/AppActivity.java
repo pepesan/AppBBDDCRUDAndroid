@@ -2,10 +2,10 @@ package com.cursosdedesarrollo.myapplication;
 
 import java.util.List;
 
+import com.cursosdedesarrollo.myapplication.beans.Aplicacion;
 import com.cursosdedesarrollo.myapplication.beans.Person;
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
