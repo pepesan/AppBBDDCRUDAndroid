@@ -21,6 +21,18 @@ public class Aplicacion extends Application {
 	public List<Person> getPersons(){
 		return modelo.getPersons();
 	}
+	public Person get (Long id){
+		return  modelo.get(id);
+	}
+	public void remove (Person p){
+		modelo.remove(p);
+	}
+	public void add(Person p){
+		modelo.add(p);
+	}
+	public void set (Person p){
+		modelo.set(p);
+	}
 
 
 
