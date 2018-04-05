@@ -9,16 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_GLOBAL;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_ID;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_LATITUDE;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_LOCATION;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_LONGITUDE;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_NAME;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_PHOTOPATH;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_TABLE;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_THUMBPHOTOPATH;
-import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.PERSON_TLF;
+import static com.cursosdedesarrollo.myapplication.beans.PersonSqliteHelper.*;
 
 /**
  * Created by pepesan on 20/3/18.
@@ -28,16 +19,18 @@ public class Modelo {
     private SQLiteDatabase db;
     private List<Person> listado;
     Modelo(Aplicacion aplicacion){
+        //Esto podría paralelizarse
         PersonSqliteHelper helper =
                 new PersonSqliteHelper(aplicacion);
+
         db = helper.getWritableDatabase();
         listado=new ArrayList<Person>();
-        this.loadList();
+
     }
     public List<Person> getPersons(){
         return listado;
     }
-    private void loadList() {
+    public void loadList() {
         listado = new ArrayList<Person>();
         Cursor personCursor = db.query(PERSON_TABLE,
                 new String[] {PERSON_ID,

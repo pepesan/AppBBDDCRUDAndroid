@@ -17,7 +17,9 @@ public class Aplicacion extends Application {
 		modelo=new Modelo(this);
 		listado=modelo.getPersons();
 	}
-	
+	public Modelo getModelo(){
+		return modelo;
+	}
 	public List<Person> getPersons(){
 		return modelo.getPersons();
 	}

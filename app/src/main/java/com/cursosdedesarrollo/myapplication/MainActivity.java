@@ -13,8 +13,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cursosdedesarrollo.myapplication.beans.Aplicacion;
+import com.cursosdedesarrollo.myapplication.beans.Modelo;
 import com.cursosdedesarrollo.myapplication.beans.Person;
 
 import java.util.List;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 	private Boolean primera=true;
 	private Aplicacion app;
 	private List<Person> datos;
+	private Modelo modelo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
 		lv=(ListView) findViewById(R.id.list);
 		empty=(TextView)findViewById(R.id.empty);
 		app=(Aplicacion) getApplication();
+		modelo=app.getModelo();
+		//esto podría colocarse en un ASyncTask
+		modelo.loadList();
+
 		datos=app.getPersons();
 		adapter=new TestListAdapter(this,
 				R.layout.item,datos);
@@ -73,6 +80,18 @@ public class MainActivity extends AppCompatActivity {
 				lv.setVisibility(View.GONE);
 			}
 			adapter.forceReload();
+		}
+	}
+	public Integer back=0;
+	@Override
+	public void onBackPressed() {
+		if(back==0){
+			back=1;
+			Toast.makeText(this,"Pulsa dos veces volver para salir",
+					Toast.LENGTH_LONG).show();
+		}else{
+			super.onBackPressed();
+			//finish();
 		}
 	}
 

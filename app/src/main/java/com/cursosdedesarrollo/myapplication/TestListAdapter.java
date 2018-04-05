@@ -51,7 +51,7 @@ public class TestListAdapter extends BaseAdapter {
 		} else {
 			tli = (TextView)convertView;
 		}
-		tli.setText(listado.get(position).toString());
+		tli.setText(listado.get(position).getName());
 		Log.d("Presentando", ""+position);		
 		return tli;
 	}

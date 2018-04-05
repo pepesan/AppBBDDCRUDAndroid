@@ -50,6 +50,13 @@ public class Mostrar extends AppActivity {
 	}
 
 	@Override
+	public void onBackPressed() {
+		Toast.makeText(this,"Saliendo del Mostrar",
+				Toast.LENGTH_SHORT).show();
+		super.onBackPressed();
+	}
+
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_mostrar, menu);
